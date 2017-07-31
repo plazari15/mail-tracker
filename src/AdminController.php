@@ -64,17 +64,6 @@ class AdminController extends Controller
     }
 
     /**
-     * Show Email.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function getShowEmail($id)
-    {
-        $email = SentEmail::where('id',$id)->first();
-        return \View('emailTrakingViews::show')->with('email', $email);
-    }
-
-    /**
      * Url Detail.
      *
      * @return \Illuminate\Http\Response
