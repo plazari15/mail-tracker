@@ -20,7 +20,6 @@ class CreateSentEmailsTable extends Migration
             $table->string('sender')->nullable();
             $table->string('recipient')->nullable();
             $table->string('subject')->nullable();
-            $table->text('content')->nullable();
             $table->integer('opens')->nullable();
             $table->integer('clicks')->nullable();
             $table->timestamps();
