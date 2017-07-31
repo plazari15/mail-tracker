@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1>Mail Tracker</h1>
+                <h1>Visualização de Emails</h1>
             </div>
         </div>
         <div class="row">
@@ -24,11 +24,11 @@
                         <input type="text" name="search" id="search" value="{{ session('mail-tracker-index-search') }}">
                     </div>
                     <button type="submit" class="btn btn-default">
-                        Search
+                        Buscar
                     </button>
                     <div class="btn btn-default">
                         <a href="{{ route('mailTracker_ClearSearch') }}">
-                            Clear Search
+                            Limpar Busca
                         </a>
                     </div>
                 </form>
@@ -40,12 +40,11 @@
                 <table class="table table-striped">
                     <tr>
                         <th>SMTP</th>
-                        <th>Recipient</th>
-                        <th>Subject</th>
-                        <th>Opens</th>
+                        <th>Destinatário</th>
+                        <th>Assunto</th>
+                        <th>Aberturas</th>
                         <th>Clicks</th>
-                        <th>Sent At</th>
-                        <th>View Email</th>
+                        <th>Enviado</th>
                         <th>Clicks</th>
                     </tr>
                 @foreach($emails as $email)
@@ -60,11 +59,6 @@
                       <td>{{$email->opens}}</td>
                       <td>{{$email->clicks}}</td>
                       <td>{{$email->created_at->format(config('mail-tracker.date-format'))}}</td>
-                      <td>
-                          <a href="{{route('mailTracker_ShowEmail',$email->id)}}" target="_blank">
-                            View
-                          </a>
-                      </td>
                       <td>
                           @if($email->clicks > 0)
                               <a href="{{route('mailTracker_UrlDetail',$email->id)}}">Url Report</a>
