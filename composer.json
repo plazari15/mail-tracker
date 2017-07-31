@@ -1,18 +1,17 @@
 {
-    "name": "jdavidbakr/mail-tracker",
+    "name": "plazari15/mail-tracker",
     "type": "library",
-    "description": "Logs and tracks all outgoing emails from Laravel",
+    "description": "This is an Fork from 'jdavidbakr' this library show logs from emails sents",
     "keywords": [
-        "jdavidbakr",
+        "plazari15",
         "MailTracker"
     ],
-    "homepage": "https://github.com/jdavidbakr/MailTracker",
+    "homepage": "https://github.com/plazari15/mail-tracker",
     "license": "MIT",
     "authors": [
         {
-            "name": "J David Baker",
-            "email": "me@jdavidbaker.com",
-            "homepage": "http://www.jdavidbaker.com",
+            "name": "Pedro Lazari",
+            "email": "plazari96@gmail.com",
             "role": "Developer"
         }
     ],
